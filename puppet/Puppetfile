@@ -1,0 +1,5 @@
+mod 'stdlib',
+  :git => 'https://github.com/puppetlabs/puppetlabs-stdlib',
+  :ref => '4.10.0'
+
+

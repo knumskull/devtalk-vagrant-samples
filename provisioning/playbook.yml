@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+  become_method: sudo
+  gather_facts: no
+
+  tasks:
+    - name: ensure apache is at the latest version
+      yum: name=httpd state=latest
+    - name: ensure apache is running (and enable it at boot)
+      service: name=httpd state=started enabled=yes
+

@@ -10,9 +10,9 @@ Vagrant.configure(2) do |config|
     vb.memory = "1024"
   end
 
-  config.vm.provision "shell", inline: <<-SHELL
-    sudo yum install -y httpd
-    sudo systemctl restart httpd
-  SHELL
+  # Provision
+  config.vm.provision :ansible do |ansible|
+    ansible.playbook = "provisioning/playbook.yml"
+  end
 
 end

@@ -68,8 +68,8 @@ Vagrant.configure(2) do |config|
     sudo yum install -y httpd
   SHELL
 
-  # config.vm.provision "shell", inline: <<-SHELL
-  #   sudo systemctl restart httpd
-  # SHELL
+  config.vm.provision "shell", inline: <<-SHELL
+    sudo systemctl restart httpd
+  SHELL
 
 end

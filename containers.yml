@@ -1,0 +1,7 @@
+---
+- name: webserver
+  build_dir: webserver
+  ports: ['8080:80', '8443:443']
+- name: database
+  build_dir: database
+  ports: ['3306:3306']
